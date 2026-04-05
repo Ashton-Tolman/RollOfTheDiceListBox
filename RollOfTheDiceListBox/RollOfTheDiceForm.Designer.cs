@@ -31,6 +31,7 @@
             RollDiceButton = new Button();
             ClearButton = new Button();
             ExitButton = new Button();
+            DisplayListBox = new ListBox();
             SuspendLayout();
             // 
             // RollDiceButton
@@ -41,6 +42,7 @@
             RollDiceButton.TabIndex = 0;
             RollDiceButton.Text = "Roll Dice";
             RollDiceButton.UseVisualStyleBackColor = true;
+            RollDiceButton.Click += RollDiceButton_Click;
             // 
             // ClearButton
             // 
@@ -50,6 +52,7 @@
             ClearButton.TabIndex = 1;
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // ExitButton
             // 
@@ -59,12 +62,22 @@
             ExitButton.TabIndex = 2;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
+            // 
+            // DisplayListBox
+            // 
+            DisplayListBox.FormattingEnabled = true;
+            DisplayListBox.Location = new Point(12, 12);
+            DisplayListBox.Name = "DisplayListBox";
+            DisplayListBox.Size = new Size(776, 329);
+            DisplayListBox.TabIndex = 3;
             // 
             // RollOfTheDiceListBoxForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(DisplayListBox);
             Controls.Add(ExitButton);
             Controls.Add(ClearButton);
             Controls.Add(RollDiceButton);
@@ -78,5 +91,6 @@
         private Button RollDiceButton;
         private Button ClearButton;
         private Button ExitButton;
+        private ListBox DisplayListBox;
     }
 }
