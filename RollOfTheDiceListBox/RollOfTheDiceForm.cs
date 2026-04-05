@@ -1,3 +1,9 @@
+
+/* Ashton Tolman
+ * Spring 2026
+ * RollOfTheDiceListBox
+ * https://github.com/Ashton-Tolman/ShuffleTheDeck.git
+ */
 namespace RollOfTheDiceListBox
 {
     public partial class RollOfTheDiceListBoxForm : Form
@@ -15,17 +21,21 @@ namespace RollOfTheDiceListBox
         private void CreateHeader()
         {
             string header = "";
+            int padding = 6;
+
             for (int i = 2; i < 13; i++)
             {
-                header = header + $"{i}".PadLeft(3) + "  |";
+                header = header + $"{i}".PadRight(padding) + "|";
             }
             DisplayListBox.Items.Add(header);
         }
 
         private void AccumulateDataInString()
         {
+            string finalData = "";
             Random diceRoll = new Random();
             int[] rollCount = new int[13];
+            int padding = 5;
 
             //create counting array and collect data
             for (int i = 0; i < 1000; i++)
@@ -35,13 +45,12 @@ namespace RollOfTheDiceListBox
 
             }
 
-            string finalData         for (int i = 2; i < 13; i++)
-
+            for (int i = 2; i < 13; i++)
             {
-                finalDatfinalDataDatfinalDataalDatDa       }
+                finalData += $"{rollCount[i]}".PadRight(padding) + "|";
+            }
             DisplayListBox.Items.Add(finalData);
-
-fin  find     finalDatafinalDatalDa----------------------------------------------------
+        }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -62,10 +71,14 @@ fin  find     finalDatafinalDatalDa---------------------------------------------
             //Print header 
             CreateHeader();
             //Line break
-            DisplayListBox.Items.Add(new string('-', 56));
+            DisplayListBox.Items.Add(new string('-', 71));
 
             //Print data
             AccumulateDataInString();
+
+            //Line break
+            DisplayListBox.Items.Add(new string('-', 71));
+
         }
     }
 }
