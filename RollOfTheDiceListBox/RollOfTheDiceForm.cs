@@ -65,7 +65,7 @@ namespace RollOfTheDiceListBox
         private void RollDiceButton_Click(object sender, EventArgs e)
         {
             string padding = "                           ";
-
+            DisplayListBox.Items.Clear();
             DisplayListBox.Items.Add(padding + "Roll Of The Dice");
 
             //Print header 
