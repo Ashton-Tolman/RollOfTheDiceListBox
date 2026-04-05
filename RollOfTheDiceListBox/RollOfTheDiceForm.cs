@@ -2,7 +2,7 @@
 /* Ashton Tolman
  * Spring 2026
  * RollOfTheDiceListBox
- * https://github.com/Ashton-Tolman/ShuffleTheDeck.git
+ * https://github.com/Ashton-Tolman/RollOfTheDiceListBox.git
  */
 namespace RollOfTheDiceListBox
 {
