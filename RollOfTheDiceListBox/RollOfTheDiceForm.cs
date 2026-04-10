@@ -15,9 +15,6 @@ namespace RollOfTheDiceListBox
 
 
         //Custom Methods-------------------------------------------------------
-
-
-        //Creates formatted string header to print as single item in list
         private void CreateHeader()
         {
             string header = "";
@@ -51,6 +48,9 @@ namespace RollOfTheDiceListBox
             }
             DisplayListBox.Items.Add(finalData);
         }
+
+
+        //Creates formatted string header to print as single item in list
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
